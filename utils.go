@@ -9,5 +9,5 @@ type Case struct {
 }
 
 func (c *Case) errorInfo(actual any) string {
-	return fmt.Sprintf("\nError: %s\nexpected: %v\nactual: %v", c.name, c.expected, actual)
+	return fmt.Sprintf("\nError: %s\nexpected: %v\nactual:   %v", c.name, c.expected, actual)
 }

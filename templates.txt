@@ -1,0 +1,31 @@
+{{define "function"}}package main
+
+func {{.Name}}() {
+  return
+}
+{{end}}
+
+{{define "test"}}package main
+
+import (
+  "testing"
+  "reflect"
+)
+
+func Test{{capitalize .Name}}(t *testing.T) {
+  table := []Case{
+    {
+      name: "should ",
+      arg: ,
+      expected: ,
+    },
+  }
+  for _, tc := range table {
+    out := {{.Name}}(tc.arg)
+    if out != tc.expected {
+    if !reflect.DeepEqual(out, tc.expected) {
+      t.Errorf(tc.errorInfo(out))
+    }
+  }
+}
+{{end}}
