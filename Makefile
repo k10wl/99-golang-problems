@@ -1,7 +1,10 @@
-test:
-	go test ./...
+.PHONY: problem test
 
-.PHONY: problem
+export GODEBUG=randautoseed=0
+
+test:
+	@go test ./...
+
 problem:
 	@echo creating problem $(name)
 	@go run main.go -problem $(name)
