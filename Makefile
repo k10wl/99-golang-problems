@@ -3,7 +3,7 @@
 export GODEBUG=randautoseed=0
 
 test:
-	@go test ./...
+	go test
 
 problem:
 	@echo creating problem $(name)
